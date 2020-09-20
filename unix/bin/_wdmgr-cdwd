@@ -1,0 +1,1 @@
+WDMGR_DIR=`wdmgr sh $*` && cd $WDMGR_DIR
