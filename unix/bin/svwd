@@ -1,0 +1,18 @@
+#!/bin/bash
+
+if [ $# -gt 1 ]; then
+  >&2 echo "Incorrect Usage"
+  echo "Usage: $0 [name]"
+  echo "  Save the current working directory as <name> (default 'unnamed')."
+  exit 1
+fi
+
+wdmgr_dir=~/.wdmgr
+
+if [ $# -gt 0 ]; then
+  name=$1
+else
+  name=unnamed
+fi
+
+mkdir -p $wdmgr_dir && pwd > $wdmgr_dir/$name

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ $# -ne 0 ]; then
+  >&2 echo "Incorrect Usage"
+  echo "Usage: $0"
+  echo "  Remove all saved paths."
+  exit 1
+fi
+
+wdmgr_dir=~/.wdmgr
+
+rm -fr $wdmgr_dir

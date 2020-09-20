@@ -1,0 +1,18 @@
+#!/bin/bash
+
+if [ $# -gt 1 ]; then
+  >&2 echo "Incorrect Usage"
+  echo "Usage: $0 [name]"
+  echo "  Remove the saved path <name> (default 'unnamed')."
+  exit 1
+fi
+
+wdmgr_dir=~/.wdmgr
+
+if [ $# -gt 0 ]; then
+  name=$1
+else
+  name=unnamed
+fi
+
+rm $wdmgr_dir/$name

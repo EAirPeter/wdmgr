@@ -1,0 +1,34 @@
+#!/bin/bash
+
+if [ $# -ne 0 ]; then
+  >&2 echo "Incorrect Usage"
+  echo "Usage: $0"
+  echo "  List all saved directories."
+  exit 1
+fi
+
+wdmgr_dir=~/.wdmgr
+
+names=()
+contents=()
+maxlen=0
+
+if [ -d $wdmgr_dir ]; then
+  for file in $wdmgr_dir/*; do
+    name=$(basename $file)
+    len=${#name}
+    names+=($name)
+    contents+=($(< $file))
+    if [ $len -gt $maxlen ]; then
+      maxlen=$len
+    fi
+  done
+fi
+
+if (( ${#names[@]} )); then
+  for i in ${!names[@]}; do
+    printf "%${maxlen}s %s\n" ${names[$i]} ${contents[$i]}
+  done
+else
+  echo "(Empty)"
+fi

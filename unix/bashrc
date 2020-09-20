@@ -1,4 +1,1 @@
-alias cdwd='. _wdmgr-cdwd'
-alias svwd='wdmgr sv'
-alias lswd='wdmgr ls'
-alias rmwd='wdmgr rm'
+alias cdwd='. _cdwd'
