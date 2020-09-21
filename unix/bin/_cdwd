@@ -3,7 +3,7 @@
 if [ $# -gt 1 ]; then
   >&2 echo "Incorrect Usage"
   echo "Usage: $0 [name]"
-  echo "  Show the path with <name> (default 'unnamed')."
+  echo "  Change working directory to the saved path with name <name> (default 'unnamed')."
   exit 1
 fi
 
