@@ -20,5 +20,9 @@
 !windows/bin/lswd.ps1
 !windows/bin/rmwd.cmd
 !windows/bin/rmwd.ps1
+!windows/bin/rmallwd.cmd
+!windows/bin/rmallwd.ps1
+!windows/bin/shwd.cmd
+!windows/bin/shwd.ps1
 !windows/bin/svwd.cmd
 !windows/bin/svwd.ps1

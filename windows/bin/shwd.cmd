@@ -1,26 +1,27 @@
 @echo off
 setlocal EnableDelayedExpansion
 
-set /a wdmgr_argc=0
-for %%p in (%*) do set /a wdmgr_argc+=1
+set /a argc=0
+for %%p in (%*) do set /a argc+=1
 
-if %wdmgr_argc% gtr 1 (
+if %argc% gtr 1 (
   >&2 echo.Incorrect Usage
   echo.Usage: %0 [name]
-  echo.  Remove the saved path ^<name^> ^(default 'unnamed'^).
+  echo.  Show the path with ^<name^> ^(default 'unnamed'^).
   exit /b 1
 )
 
-if %wdmgr_argc% gtr 0 (
+set "wdmgr_dir=%USERPROFILE%\_wdmgr"
+
+if %argc% gtr 0 (
   set "name=%~1"
 ) else (
   set name=unnamed
 )
 
-set "wdmgr_dir=%USERPROFILE%\_wdmgr"
-
 if exist "%wdmgr_dir%\%name%" (
-  del "%wdmgr_dir%\%name%"
+  type "%wdmgr_dir%\%name%"
 ) else (
   echo.No path saved with name '%name%'
+  exit /b 1
 )
