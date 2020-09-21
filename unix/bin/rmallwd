@@ -7,6 +7,6 @@ if [ $# -ne 0 ]; then
   exit 1
 fi
 
-wdmgr_dir=~/.wdmgr
+wdmgr_dir="$HOME/.wdmgr"
 
-rm -fr $wdmgr_dir
+rm -fr "$wdmgr_dir"

@@ -7,12 +7,12 @@ if [ $# -gt 1 ]; then
   exit 1
 fi
 
-wdmgr_dir=~/.wdmgr
+wdmgr_dir="$HOME/.wdmgr"
 
 if [ $# -gt 0 ]; then
-  name=$1
+  name="$1"
 else
-  name=unnamed
+  name="unnamed"
 fi
 
-mkdir -p $wdmgr_dir && pwd > $wdmgr_dir/$name
+mkdir -p "$wdmgr_dir" && pwd > "$wdmgr_dir/$name"

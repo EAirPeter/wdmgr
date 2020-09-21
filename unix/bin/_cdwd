@@ -7,12 +7,12 @@ if [ $# -gt 1 ]; then
   exit 1
 fi
 
-wdmgr_dir=~/.wdmgr
+wdmgr_dir="$HOME/.wdmgr"
 
 if [ $# -gt 0 ]; then
-  wdmgr_name=$1
+  wdmgr_name="$1"
 else
-  wdmgr_name=unnamed
+  wdmgr_name="unnamed"
 fi
 
-wdmgr_dest=$(< $wdmgr_dir/$wdmgr_name) && cd $wdmgr_dest
+wdmgr_dest="$(< "$wdmgr_dir/$wdmgr_name")" && cd "$wdmgr_dest"
