@@ -22,6 +22,6 @@ if %argc% gtr 0 (
 if exist "%wdmgr_dir%\%name%" (
   type "%wdmgr_dir%\%name%"
 ) else (
-  echo.No path saved with name '%name%'
+  >&2 echo.No path saved with name '%name%'
   exit /b 1
 )

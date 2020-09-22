@@ -11,13 +11,13 @@ if %wdmgr_argc% gtr 1 (
   exit /b 1
 )
 
+set "wdmgr_dir=%USERPROFILE%\_wdmgr"
+
 if %wdmgr_argc% gtr 0 (
   set "wdmgr_name=%~1"
 ) else (
   set wdmgr_name=unnamed
 )
-
-set "wdmgr_dir=%USERPROFILE%\_wdmgr"
 
 if not exist "%wdmgr_dir%" (
   md "%wdmgr_dir%" && cd > "%wdmgr_dir%\%wdmgr_name%"

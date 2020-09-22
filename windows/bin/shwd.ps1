@@ -1,7 +1,7 @@
 if ($args.Count -gt 1) {
   Write-Error "Incorrect Usage"
   Write-Output "Usage: $PSCommandPath [name]"
-  Write-Output "Change working directory to the saved path with name <name> (default 'unnamed')."
+  Write-Output "  Show the path with <name> (default 'unnamed')."
   exit 1
 }
 
@@ -15,11 +15,9 @@ else {
 }
 
 if (Test-Path "$wdmgr_dir\$name") {
-  $dest = Get-Content "$wdmgr_dir\$name"
+  Get-Content "$wdmgr_dir\$name"
 }
 else {
   Write-Error "No path saved with name '$name'"
   exit 1
 }
-
-cd $dest

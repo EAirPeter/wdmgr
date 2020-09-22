@@ -12,7 +12,6 @@
 !unix/bin/shwd
 !unix/bin/svwd
 !windows/
-!windows/build.cmd
 !windows/bin/
 !windows/bin/cdwd.cmd
 !windows/bin/cdwd.ps1

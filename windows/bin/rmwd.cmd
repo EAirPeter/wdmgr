@@ -11,16 +11,16 @@ if %wdmgr_argc% gtr 1 (
   exit /b 1
 )
 
+set "wdmgr_dir=%USERPROFILE%\_wdmgr"
+
 if %wdmgr_argc% gtr 0 (
   set "name=%~1"
 ) else (
   set name=unnamed
 )
 
-set "wdmgr_dir=%USERPROFILE%\_wdmgr"
-
 if exist "%wdmgr_dir%\%name%" (
   del "%wdmgr_dir%\%name%"
 ) else (
-  echo.No path saved with name '%name%'
+  >&2 echo.No path saved with name '%name%'
 )
