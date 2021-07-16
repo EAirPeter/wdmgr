@@ -35,5 +35,5 @@ rmallwd
 ## Notes
 * Currently only `bash`, `CMD` and `Powershell` are supported.
 * __No other dependencies!__ All you need is your shell itself, no other interpreters or compilers.
-* The saved paths are located in `$HOME/.wdmgr` for UNIX-like systems and `%USERPROFILE%\_wdmgr`
+* The saved paths are located in `$HOME/.wdmgr` for UNIX-like systems and `%USERPROFILE%\.wdmgr`
   for Windows.

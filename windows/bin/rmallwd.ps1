@@ -5,7 +5,7 @@ if ($args.Count -ne 0) {
   exit 1
 }
 
-$wdmgr_dir = "$Env:USERPROFILE\_wdmgr"
+$wdmgr_dir = "$Env:USERPROFILE\.wdmgr"
 
 if ($args.Count -gt 0) {
   $name = $args[0]

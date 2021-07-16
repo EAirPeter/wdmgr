@@ -11,7 +11,7 @@ if %wdmgr_argc% gtr 1 (
   exit /b 1
 )
 
-set "wdmgr_dir=%USERPROFILE%\_wdmgr"
+set "wdmgr_dir=%USERPROFILE%\.wdmgr"
 
 if %wdmgr_argc% gtr 0 (
   set "name=%~1"

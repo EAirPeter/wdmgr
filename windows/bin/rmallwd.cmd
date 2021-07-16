@@ -11,7 +11,7 @@ if %wdmgr_argc% neq 0 (
   exit /b 1
 )
 
-set "wdmgr_dir=%USERPROFILE%\_wdmgr"
+set "wdmgr_dir=%USERPROFILE%\.wdmgr"
 
 if exist "%wdmgr_dir%" (
   rd /s /q "%wdmgr_dir%"
