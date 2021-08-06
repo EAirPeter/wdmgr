@@ -15,6 +15,7 @@
 !windows/bin/
 !windows/bin/cdwd.cmd
 !windows/bin/cdwd.ps1
+!windows/bin/exwd.cmd
 !windows/bin/lswd.cmd
 !windows/bin/lswd.ps1
 !windows/bin/rmwd.cmd
