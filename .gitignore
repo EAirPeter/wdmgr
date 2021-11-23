@@ -24,5 +24,6 @@
 !windows/bin/rmallwd.ps1
 !windows/bin/shwd.cmd
 !windows/bin/shwd.ps1
+!windows/bin/stwd.cmd
 !windows/bin/svwd.cmd
 !windows/bin/svwd.ps1
